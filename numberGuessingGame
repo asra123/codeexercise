@@ -1,0 +1,51 @@
+/*
+
+Number guessing game allows the user to guess a number between 1 and 100. Based upon the number guessed it will take the user closer to the number guessed in 
+
+minimum number of tries by discarding the range lower or higher than the actual number guessed based on what was guessed.
+It also prints the number of tries took to guess the number at the end.
+
+**/
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessGame {
+
+public static void main(String[] args) {
+
+Random randum = new Random();
+int numberToGuess = randum.netInt(100);
+int numberOfTries = 0;
+Scanner in = new Scanner(System.in);
+int guess;
+boolean win = false;
+while (win == false) {
+
+System.out.println("Guess A number between 1 and 100 ");
+guess = input.netInt();
+numberOfTries++;
+
+if (guess == numberToGuess) {
+win = true;
+
+}
+
+else if (guess < numberToGuess) {
+System.out.println("Your guess is too low");
+}
+
+else if (guess > numberToGuess) {
+System.out.println("Your guess is too high");
+		}
+
+	}
+
+System.out.println("You win!");
+
+System.out.println("The number was "+ numberToGuess);
+
+System.out.println("It took you "+numberOfTries+ " tries");
+
+	}
+}
